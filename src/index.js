@@ -15,3 +15,9 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// git init
+// git add .
+// git commit -m "Initial Setup 1"
+// git remote add origin https://github.com/Sumair5/textutils-react.git
+// git push -u origin main

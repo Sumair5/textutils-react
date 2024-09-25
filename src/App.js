@@ -5,6 +5,7 @@ import './App.css'; // Importing custom CSS styles
 import Navbar from './components/Navbar'; // Importing Navbar component
 import TextForm from './components/TextForm'; // Importing TextForm component for text analysis
 import Alert from './components/Alert'; // Importing Alert component for notifications
+import About from './components/About';
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -73,6 +74,10 @@ function App() {
         </Routes>
     
    */}
+   <div className='container my-4'>
+   <About />
+
+   </div>
     </>
   );
 }

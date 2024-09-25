@@ -37,7 +37,7 @@ if(myStyle.color==='white'){
 
   return (
     <div className='container' style={myStyle}>
-      <h3 className='my-2'>About</h3>
+      <h3 className='my-2'>About Page</h3>
               <div className="accordion" id="accordionExample" style={myStyle}>
           <div className="accordion-item">
             <h2 className="accordion-header">
