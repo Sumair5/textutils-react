@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'; // Importing Navbar component
 import TextForm from './components/TextForm'; // Importing TextForm component for text analysis
 import Alert from './components/Alert'; // Importing Alert component for notifications
 import About from './components/About';
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   // State variables
@@ -38,13 +38,13 @@ function App() {
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark'); // Switch to dark mode
-      document.body.style.backgroundColor = '#2f5288'; // Apply dark background color
-      document.title = "Now dark mode"; // Change the document title when dark mode is enabled
+      document.body.style.backgroundColor = '#042743'; // Apply dark background color
+      // document.title = "Now dark mode"; // Change the document title when dark mode is enabled
       showAlert("Dark mode enabled", "success"); // Show success alert when dark mode is enabled
     } else {
       setMode('light'); // Switch to light mode
       document.body.style.backgroundColor = 'white'; // Apply light background color
-      document.title = "Now light mode"; // Change the document title when light mode is enabled
+      // document.title = "Now light mode"; // Change the document title when light mode is enabled
       showAlert("Light mode enabled", "warning"); // Show warning alert when light mode is enabled
     }
   };
@@ -52,8 +52,8 @@ function App() {
   // The main JSX return block to render the UI
   return (
    
-    
     <>
+    <Router>
       {/* Navbar component with dynamic mode and toggleMode function passed as props */}
       <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode} />
       
@@ -61,23 +61,20 @@ function App() {
       <Alert alert={alert} />
       
       {/* Main container for the TextForm component */}
-      <div className='container my-3'>
+      {/* <div className='container my-3'> */}
         {/* TextForm component for text analysis, with mode and showAlert passed as props */}
-        <TextForm showAlert={showAlert} heading="Enter The Text To Analyze" mode={mode} />
-      </div>
+        {/* <TextForm showAlert={showAlert} heading="Enter The Text To Analyze" mode={mode} /> */}
+      {/* </div> */}
 
-{/* for routing pages   exact used to match exit words  of file/user   /user/home  etc
+ {/* for routing pages   exact used to match exit words  of file/user   /user/home  etc */}
       <Routes>
-          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter The Text To Analyze" mode={mode} />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/TextForm" element={  <TextForm showAlert={showAlert} heading="Enter The Text To Analyze" mode={mode} />} />
+          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to perform text manipulation" mode={mode} />} />
+
         </Routes>
     
-   */}
-   <div className='container my-4'>
-   <About />
-
-   </div>
+   
+  </Router>
     </>
   );
 }

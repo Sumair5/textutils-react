@@ -21,3 +21,5 @@ reportWebVitals();
 // git commit -m "Initial Setup 1"
 // git remote add origin https://github.com/Sumair5/textutils-react.git
 // git push -u origin main
+
+// npm run deploy
