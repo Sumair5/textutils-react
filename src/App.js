@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'; // Importing Navbar component
 import TextForm from './components/TextForm'; // Importing TextForm component for text analysis
 import Alert from './components/Alert'; // Importing Alert component for notifications
 import About from './components/About';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   // State variables
