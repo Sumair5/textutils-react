@@ -82,7 +82,7 @@ export default function TextForm(props) {
       {/* Text Summary */}
       <div className='container my-3'>
         <h1>Your text summary</h1>
-        <p>{text.split(" ").filter(Boolean).length} words, and {text.length} characters</p>
+        <p>{text.split(/\s+/).filter(Boolean).length} words, and {text.length} characters</p>
         <p>{(0.008 * text.split(" ").filter(Boolean).length).toFixed(2)} Minutes Required to Read</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : 'Nothing to preview'}</p>
